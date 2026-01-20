@@ -1,0 +1,214 @@
+/* =====================
+   VARIABLES DE COLOR
+===================== */
+:root{
+  --bg: #f4f6f8;
+  --card: #ffffff;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --primary: #1e3a8a;
+  --secondary: #2563eb;
+  --radius: 12px;
+  --max-width: 900px;
+}
+
+/* =====================
+   RESET BÁSICO
+===================== */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body{
+  height: 100%;
+}
+
+body{
+    margin: 80px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  padding-top: 100px;
+}
+
+/* =====================
+   CONTENEDOR
+===================== */
+.container{
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 20px;
+}
+
+/* =====================
+   HEADER / INTRO
+===================== */
+.intro{
+  background: linear-gradient(
+    180deg,
+    rgba(37, 99, 235, 0.08),
+    transparent 70%
+  );
+  border-radius: var(--radius);
+  padding: 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* Logo */
+.intro .logo{
+  width: 600px;
+  height: 300px;
+  border-radius: 10px;
+  background: var(--card);
+  padding: 6px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: fadeUp 0.6s ease 0.15s forwards;
+}
+
+/* Título principal */
+.intro .title{
+  font-size: clamp(22px, 4vw, 36px);
+  font-weight: 700;
+  color: var(--primary);
+  animation: fadeUp 0.6s ease 0.3s forwards;
+}
+
+/* Subtítulo */
+.intro .subtitle{
+  max-width: 65ch;
+  font-size: 15px;
+  color: var(--muted);
+  animation: fadeUp 0.6s ease 0.45s forwards;
+}
+
+/* =====================
+   TIPOGRAFÍA
+===================== */
+h1{
+  font-size: 26px;
+  text-align: center;
+  color: var(--primary);
+  margin: 30px 0 15px;
+}
+
+h2{
+  font-size: 18px;
+  color: var(--secondary);
+  margin: 25px 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(37,99,235,0.15);
+}
+
+h3{
+  font-size: 16px;
+  color: var(--primary);
+  margin: 15px 0 8px;
+}
+
+/* =====================
+   TEXTO Y LISTAS
+===================== */
+p{
+  margin-bottom: 14px;
+  text-align: justify;
+}
+
+ul{
+  background: var(--card);
+  padding: 14px 20px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+li{
+  margin-bottom: 8px;
+}
+
+/* =====================
+   CARDS
+===================== */
+.card{
+  background: var(--card);
+  padding: 18px;
+  border-radius: var(--radius);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+  margin-bottom: 20px;
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* =====================
+   GALERÍA
+===================== */
+.galeria{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 20px 0;
+}
+
+.galeria img{
+  width: 100%;
+  max-width: 260px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/* =====================
+   IMÁGENES GENERALES
+===================== */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* =====================
+   ANIMACIONES
+===================== */
+@keyframes fadeUp{
+  from{
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =====================
+   ACCESIBILIDAD
+===================== */
+@media (prefers-reduced-motion: reduce){
+  *{
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 640px){
+  .intro{
+    padding: 20px;
+  }
+
+  .intro .title{
+    font-size: 22px;
+  }
+
+  .galeria img{
+    max-width: 48%;
+  }
+}
