@@ -1,0 +1,104 @@
+/* =====================
+   ESTILO FORMAL – COLOR CORINTO
+===================== */
+
+/* Colores base */
+:root{
+    --bg: #f2f4f8;
+    --text: #2b2b2b;
+    --primary: #23376D;   /* Azul Kinal */
+    --card: #ffffff;
+}
+
+/* Reset básico */
+*{
+    box-sizing: border-box;
+}
+
+/* Cuerpo */
+body{
+    margin: 0;
+    padding: 60px 80px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+/* Títulos */
+h1{
+    color: var(--primary);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 14px;
+    border-bottom: 2px solid rgba(122,31,43,0.35);
+    padding-bottom: 6px;
+}
+
+/* Párrafos */
+p{
+    background-color: var(--card);
+    padding: 16px 20px;
+    border-radius: 8px;
+    text-align: justify;
+    max-width: 900px;
+    margin: 0 auto 32px auto;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.06);
+}
+
+/* Responsive */
+@media (max-width: 768px){
+    body{
+        padding: 40px 20px;
+    }
+
+    h1{
+        font-size: 20px;
+    }
+}
+
+
+.imgTrayecto{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgTrayecto img{
+    width: 300px;
+    height: 200px;
+    margin: 10px;
+    border-radius: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+}
+
+.imgYo{
+    width: 100%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.imgYo img{
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    flex-wrap: wrap;
+    animation: fadeIn 1.5s forwards;
+    transition: transform 0.4s ease, box-shadow 0.4s ease ;
+}
+
+.imgYo img:hover {
+    transform: scale(2.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
