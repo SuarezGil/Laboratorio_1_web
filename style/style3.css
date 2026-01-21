@@ -1,0 +1,304 @@
+/* ================== IMPORTS ================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+/* ================== RESET GLOBAL ================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ================== HERO ================== */
+/* ================== HERO SECTION ================== */
+.kinal_img {
+    padding-top: 150px;
+    color: white;
+    margin: 0%;
+    background-image: url(../kinal/img/IMG1.png);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 750px;
+    margin: 0%;
+}
+
+
+.kinal_img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right,
+            rgba(0, 0, 0, 0.65),
+            rgba(0, 0, 0, 0.25));
+    z-index: 1;
+}
+
+/* TEXTO HERO */
+.kinal_img p {
+    position: relative;
+    z-index: 2;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(3rem, 7vw, 7.5rem);
+    max-width: 1100px;
+    margin-left: 7%;
+    color: #fff;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+}
+
+
+
+html,
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ================== LINKS ================== */
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* ================== HEADER ================== */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #7a1f2b;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 170px;
+}
+
+/* ================== NAV ================== */
+.navbar {
+    margin-left: auto;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu a {
+    padding: 10px 15px;
+    display: block;
+}
+
+.menu a:hover {
+    background-color: #5e1720;
+    border-radius: 5px;
+}
+
+/* SUBMENU */
+.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #7a1f2b;
+    min-width: 180px;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+/* ================== HERO ================== */
+.kinal_img {
+    padding-top: 150px;
+    min-height: 100vh;
+    background-image: url(../kinal/img/IMG1.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.kinal_img p {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 7.5rem);
+    max-width: 90%;
+    margin-left: 5%;
+    color: white;
+    -webkit-text-stroke: 3px black;
+}
+
+/* ================== SECCIÓN TEXTO ================== */
+.body_background1 {
+    background-color: white;
+    padding: 60px 20px;
+}
+
+.kinal_text h2 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    text-align: center;
+}
+
+.kinal_text p {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* ================== FLEX UTIL ================== */
+.flex_body1,
+.flex_body2,
+.flex_body3,
+.flex_body4,
+.flex_body5,
+.flex_body6,
+.flex_body7,
+.flex_body8 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ================== IMÁGENES ================== */
+.kinal_img2 img {
+    width: min(90%, 500px);
+}
+
+/* ================== VIDEO ================== */
+.video-semicircle {
+    width: 100%;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.circle {
+    width: 100%;
+    height: 100%;
+}
+
+.circle video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* ================== SECCIÓN TARJETAS ================== */
+.body_background {
+    background-image: url(../kinal/img/IMG16.jpeg);
+    background-size: cover;
+    background-position: center;
+    padding: 80px 20px;
+}
+
+/* ====== GRID EDUCACIÓN ====== */
+.kinal_img3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 🔥 3 arriba */
+    gap: 40px;
+    max-width: 1400px;
+    width: 100%;
+}
+
+.kinal_img4 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* 🔥 2 abajo */
+    gap: 40px;
+    max-width: 1000px;
+    width: 100%;
+    margin-top: 60px;
+}
+
+
+.container_imgGrades,
+.container_imgGrades2 {
+    padding: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    text-align: center;
+    transition: .4s;
+}
+
+.container_imgGrades:hover,
+.container_imgGrades2:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
+}
+
+.container_imgGrades p,
+.container_imgGrades2 p {
+    color: white;
+    margin-top: 15px;
+}
+
+/* ================== PARTNERS ================== */
+.flex_body5 {
+    background-color: #23376D;
+    padding: 60px 20px;
+}
+
+.kinal_text2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.kinal_img5 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.kinal_img5 img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* ================== FOOTER ================== */
+.flex_body_ {
+    background-color: #23376D;
+    padding: 60px 20px;
+}
+
+.flex_body6 {
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.flex_body7 {
+    max-width: 300px;
+    color: white;
+    text-align: center;
+}
+
+/* ================== MEDIA QUERY ================== */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+    }
+
+    .kinal_img3,
+    .kinal_img4 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .flex_body6 {
+        flex-direction: column;
+    }
+}
