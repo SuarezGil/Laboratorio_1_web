@@ -211,4 +211,40 @@ img{
   .galeria img{
     max-width: 48%;
   }
+
+  body{
+    margin: 20px;
+    padding-top: 50px;
+  }
+
+  .container{
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px){
+  .intro .logo{
+    width: 100%;
+    height: auto;
+  }
+
+  .galeria{
+    flex-direction: column;
+  }
+
+  .galeria img{
+    max-width: 100%;
+  }
+
+  h1{
+    font-size: 20px;
+  }
+
+  h2{
+    font-size: 16px;
+  }
+
+  h3{
+    font-size: 14px;
+  }
 }
